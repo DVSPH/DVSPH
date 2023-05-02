@@ -18,7 +18,16 @@ You will need to add html, header and body tags-->
   <tbody>
 
 <?php
-$json_data = file_get_contents("https://dvsph.net/api/Repeaters.json");
+//Use CURL to get JSON file from DVSPH API Server
+      $ch = curl_init("https://dvsph.net/api/Repeaters.json");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      $json_data = curl_exec($ch);
+	  if(curl_exec($ch) === false)
+			{
+//Error message if the JSON file can not be imported - Customise this with your own message if you wish				
+				echo 'DV Scotland Phoenix Repeater live feed not available at this time';
+			}
+      curl_close($ch);
 
 $data = json_decode($json_data, true);
 
@@ -26,7 +35,7 @@ $items = $data['Repeaters'];
 
 foreach($items as $row){
   
-  	//Set Variables - some are taken from RadioID.net 
+  	//Set Variables - some are taken from RadioID.net. Listed here for clarity personally would have just included the $row variables into the echo output.
   	$callsign = $row["callsign"];
   	$city = $row["city"];
 	$freq_output = $row["frequency"];
