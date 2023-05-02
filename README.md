@@ -12,7 +12,7 @@ For those that don't wish to use JSON (XML or CSV) already prepared iframe pages
 
 Just copy and paste the following example into your page, adjust height and width to suit.
 
-Example: <iframe src="https://dvsph.net/api/html/TalkGroups3.php" height="1000" width="100%" title="DVSPH_TalkGroups"></iframe>
+Example: <iframe src="https://dvsph.net/api/html/TalkGroups3.php" height="1000" width="100%" frameBorder="0" title="DVSPH_TalkGroups"></iframe>
 
 
 
