@@ -3,8 +3,17 @@
 //Quick and simple table to display the Official Talk Group feed from DVSPH DMR Network
 //Feel free to customise but remember to please give credit to DVSHP.net for usage
 
-$json_data = file_get_contents("https://dvsph.net/api/TalkGroups.json");
-
+//Use CURL to get JSON file from DVSPH API Server
+      $ch = curl_init("https://dvsph.net/api/TalkGroups.json");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      $json_data = curl_exec($ch);
+	  if(curl_exec($ch) === false)
+			{
+//Error message if the JSON file can not be imported - Customise this with your own message if you wish				
+				echo 'DV Scotland Phoenix Talk Groups live feed not available at this time';
+			}
+      curl_close($ch);
+      
 $data = json_decode($json_data, true);
 
 $TalkGroups = $data['TalkGroups'];
