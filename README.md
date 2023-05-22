@@ -14,6 +14,11 @@ Just copy and paste the following example into your page, adjust height and widt
 
 Example: <iframe src="https://dvsph.net/api/html/TalkGroups3.php" height="1000" width="100%" frameBorder="0" title="DVSPH_TalkGroups"></iframe>
 
+##DMR Options Generator
+
+Code inspired by Jim Nessen but uses non of Jim's code.
+Full code will be available once it has been converted from the DVSPH custom version
+
 
 
 ## Project Website
