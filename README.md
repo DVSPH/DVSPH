@@ -8,12 +8,5 @@ The API JSON file gets requested every time the page is loaded.  You could reduc
 PR and additonal scripts are warmly welcomed
 
 
-## DMR Options Generator
-
-Code inspired by Jim Nessen but uses non of Jim's code.
-Full code will be available once it has been converted from the DVSPH custom version
-
-
-
 ## Project Website
 [https://dvsph.net/api](https://dvsph.net/api)
